@@ -23,7 +23,7 @@ for file_name in os.listdir(known_faces):
     image_path = os.path.join(known_faces, file_name)
     image = face_recognition.load_image_file(image_path)
 
-    encodings = face_recognition.face_encodings(image)  # Correct function name
+    encodings = face_recognition.face_encodings(image)  
     if encodings:
         known_face_encoding.append(encodings[0])  # Store only the first encoding
         name = os.path.splitext(file_name)[0]  # Remove file extension (e.g., "person1.jpg" → "person1")
